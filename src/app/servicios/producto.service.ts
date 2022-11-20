@@ -36,7 +36,7 @@ export class ProductoService {
   ActulizarProducto(producto: ModeloProducto): Observable<ModeloProducto>{
     return this.http.put<ModeloProducto>(`${this.url}/productos/${producto.id}`, producto, {
       headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.token}`
+        'Authorization': `Bearer${this.token}`
       })
     })
   }
